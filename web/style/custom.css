@@ -1,0 +1,364 @@
+
+
+.sidenav {
+    height: 100%;
+    width: 200px;
+    position: relative;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(243, 248, 244, 0.56);
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.main-section {
+    margin-left: 200px; /* Same as the width of the sidenav */
+}
+
+.grid-row {
+    max-width: 75rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.grid-col {
+    width: 24%;
+    clear: both;
+}
+
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.testimg {
+    background: #3A6F9A;
+    vertical-align: middle;
+    width: 100%;
+    height: auto;
+}
+
+.testfrm {
+    height: 100%; /* equals max image height */
+    max-height: 217.5px;
+    width: 100%;
+    border: 1px solid red;
+    white-space: nowrap;
+}
+
+.thumbnail-picture {
+    max-height: 45px;
+}
+
+.card-dropshadow {
+    box-shadow: 5px 10px #888888;
+}
+
+/* Android 2.3 :checked fix */
+@keyframes fake {
+    from {
+        opacity: 1;
+    }
+    to {
+        opactity: 1
+    }
+}
+body {
+    animation: fake 1s infinite;
+    padding-right: 0px !important;
+}
+
+.radio-tabs .state {
+    position: absolute;
+    left: -10000px;
+}
+
+.radio-tabs .tab {
+    display: inline-block;
+    padding: .5em;
+    color: #696969;
+    margin-bottom: 0px;
+    vertical-align: top;
+    background-color: #eee;
+    cursor: hand;
+    cursor: pointer;
+}
+.radio-tabs .tab:hover {
+    background-color: #ffffff;
+}
+#commandes[aria-selected] ~ .tabs #commandes-tab,
+#locations[aria-selected] ~ .tabs #locations-tab,
+#compte[aria-selected] ~ .tabs #compte-tab,
+#commandes:checked ~ .tabs #commandes-tab,
+#locations:checked ~ .tabs #locations-tab,
+#compte:checked ~ .tabs #compte-tab {
+    background-color: #fff;
+    border-bottom: .3em solid #fff;
+    color: black;
+    cursor: default;
+    margin-bottom: 0;
+}
+
+.radio-tabs .panels {
+    background-color: #fff;
+    padding: .5em;
+}
+.radio-tabs .panel {
+    display: none;
+}
+#commandes[aria-selected] ~ .panels #commandes-panel,
+#locations[aria-selected] ~ .panels #locations-panel,
+#compte[aria-selected] ~ .panels #compte-panel,
+#commandes:checked ~ .panels #commandes-panel,
+#locations:checked ~ .panels #locations-panel,
+#compte:checked ~ .panels #compte-panel {
+    display: block;
+}
+
+/*SnackBar*/
+
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar {
+    visibility: hidden; /* Hidden by default. Visible on click */
+    min-width: 250px; /* Set a default minimum width */
+    margin: auto;
+    background-color: #333; /* Black background color */
+    color: #fff; /* White text color */
+    text-align: center; /* Centered text */
+    border-radius: 2px; /* Rounded borders */
+    padding: 16px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    z-index: 1; /* Add a z-index if needed */
+    right: 50px; /* Center the snackbar */
+    bottom: 75px; /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+    visibility: visible; /* Show the snackbar */
+
+    /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+    However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 75px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 75px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 75px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 75px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+/*Dropdown Cart*/
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #d0d0d0;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.qte-modif{
+    display: none;
+}
+
+.qte-article{
+    display: block;
+}
+
+.dropdown-content input {
+    width: 100%;
+    color: black;
+    padding: 5px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content input:hover {background-color: #ddd}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .qte-article {
+    display: none;
+}
+
+.dropdown:hover .qte-modif {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+
+/*Ajout Bootstrap (column width)*/
+
+.col-lg-12 {
+    width: 100% !important;
+}
+.col-lg-11 {
+    width: 91.66666667% !important;
+}
+.col-lg-10 {
+    width: 83.33333333% !important;
+}
+.col-lg-9 {
+    width: 75% !important;
+}
+.col-lg-8 {
+    width: 66.66666667% !important;
+}
+.col-lg-7 {
+    width: 58.33333333% !important;
+}
+.col-lg-6 {
+    width: 50% !important;
+}
+.col-lg-5 {
+    width: 41.66666667% !important;
+}
+.col-lg-4 {
+    width: 33.33333333% !important;
+}
+.col-lg-3 {
+    width: 25% !important;
+}
+.col-lg-2 {
+    width: 16.66666667% !important;
+}
+.col-lg-1 {
+    width: 8.33333333% !important;
+}
+
+.col-sm-12 {
+    width: 100% !important;
+}
+.col-sm-11 {
+    width: 91.66666667% !important;
+}
+.col-sm-10 {
+    width: 83.33333333% !important;
+}
+.col-sm-9 {
+    width: 75% !important;
+}
+.col-sm-8 {
+    width: 66.66666667% !important;
+}
+.col-sm-7 {
+    width: 58.33333333% !important;
+}
+.col-sm-6 {
+    width: 50% !important;
+}
+.col-sm-5 {
+    width: 41.66666667% !important;
+}
+.col-sm-4 {
+    width: 33.33333333% !important;
+}
+.col-sm-3 {
+    width: 25% !important;
+}
+.col-sm-2 {
+    width: 16.66666667% !important;
+}
+.col-sm-1 {
+    width: 8.33333333% !important;
+}
+
+.col-xs-12 {
+    width: 100% !important;
+}
+.col-xs-11 {
+    width: 91.66666667% !important;
+}
+.col-xs-10 {
+    width: 83.33333333% !important;
+}
+.col-xs-9 {
+    width: 75% !important;
+}
+.col-xs-8 {
+    width: 66.66666667% !important;
+}
+.col-xs-7 {
+    width: 58.33333333% !important;
+}
+.col-xs-6 {
+    width: 50% !important;
+}
+.col-xs-5 {
+    width: 41.66666667% !important;
+}
+.col-xs-4 {
+    width: 33.33333333% !important;
+}
+.col-xs-3 {
+    width: 25% !important;
+}
+.col-xs-2 {
+    width: 16.66666667% !important;
+}
+.col-xs-1 {
+    width: 8.33333333% !important;
+}
+
+.col-md-12 {
+    width: 100% !important;
+}
+.col-md-11 {
+    width: 91.66666667% !important;
+}
+.col-md-10 {
+    width: 83.33333333% !important;
+}
+.col-md-9 {
+    width: 75% !important;
+}
+.col-md-8 {
+    width: 66.66666667% !important;
+}
+.col-md-7 {
+    width: 58.33333333% !important;
+}
+.col-md-6 {
+    width: 50% !important;
+}
+.col-md-5 {
+    width: 41.66666667% !important;
+}
+.col-md-4 {
+    width: 33.33333333% !important;
+}
+.col-md-3 {
+    width: 25% !important;
+}
+.col-md-2 {
+    width: 16.66666667% !important;
+}
+.col-md-1 {
+    width: 8.33333333% !important;
+}

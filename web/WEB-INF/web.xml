@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>Serv_Main</servlet-name>
+        <servlet-class>Controllers.Serv_Main</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Serv_Parking</servlet-name>
+        <servlet-class>Controllers.Serv_Parking</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Serv_Payment</servlet-name>
+        <servlet-class>Controllers.Serv_Payment</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Serv_Main</servlet-name>
+        <url-pattern>/Serv_Main</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Serv_Parking</servlet-name>
+        <url-pattern>/Serv_Parking</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Serv_Payment</servlet-name>
+        <url-pattern>/Serv_Payment</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
